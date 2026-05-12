@@ -1,0 +1,11 @@
+export default defineAppConfig({
+  pages: [
+    'pages/index/index'
+  ],
+  window: {
+    backgroundTextStyle: 'light',
+    navigationBarBackgroundColor: '#faf8ef',
+    navigationBarTitleText: '2048',
+    navigationBarTextStyle: 'black'
+  }
+})
