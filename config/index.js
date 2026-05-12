@@ -12,74 +12,31 @@ const config = {
   sourceRoot: 'src',
   outputRoot: 'dist',
   plugins: [],
-  defineConstants: {
-  },
+  defineConstants: {},
   copy: {
-    patterns: [
-    ],
-    options: {
-    }
+    patterns: [],
+    options: {}
   },
   framework: 'react',
   compiler: 'webpack5',
   cache: {
-    enable: false 
+    enable: false
   },
   mini: {
     postcss: {
       pxtransform: {
         enable: true,
-        config: {
-
-        }
-      },
-      url: {
-        enable: true,
-        config: {
-          limit: 1024 
-        }
-      },
-      cssModules: {
-        enable: false, 
-        config: {
-          namingPattern: 'module', 
-          generateScopedName: '[name]__[local]___[hash:base64:5]'
-        }
+        config: {}
       }
-    },
-    webpackChain(chain) {
-      chain.resolve.alias
-        .set('@', path.resolve(__dirname, '..', 'src'))
     }
   },
   h5: {
     publicPath: '/',
     staticDirectory: 'static',
-    esnextModules: ['taro-ui'],
     postcss: {
       autoprefixer: {
         enable: true,
-        config: {
-        }
-      },
-      cssModules: {
-        enable: false, 
-        config: {
-          namingPattern: 'module', 
-          generateScopedName: '[name]__[local]___[hash:base64:5]'
-        }
-      }
-    },
-    webpackChain(chain) {
-      chain.resolve.alias
-        .set('@', path.resolve(__dirname, '..', 'src'))
-    }
-  },
-  rn: {
-    appName: 'taroDemo',
-    postcss: {
-      cssModules: {
-        enable: false, 
+        config: {}
       }
     }
   }
